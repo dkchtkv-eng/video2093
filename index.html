@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Видеосъёмка | Студия 20,93</title>
+<meta name="description" content="Студия 20,93 — видеопродакшн полного цикла для ювелирных брендов: ролики для соцсетей, имиджевое видео, видео для каталогов и маркетплейсов.">
+<meta property="og:title" content="Видеосъёмка для ювелирных брендов | Студия 20,93">
+<meta property="og:description" content="Ролики для соцсетей, имиджевое видео, видео для каталогов и маркетплейсов.">
+<meta property="og:image" content="https://static.tildacdn.com/tild6537-3864-4434-b564-313538333061/Frame_49.jpg">
+<link rel="icon" href="https://static.tildacdn.com/tild3932-3935-4339-a166-386639343335/logo_sight270.png">
+<style>
+:root{
+  --bg:#0b090a; --bg2:#141213; --line:#2a2728; --fg:#ffffff; --muted:#8a8788; --accent:#ff8562;
+  --sans:"Helvetica Neue",Helvetica,Arial,sans-serif; --serif:"Times New Roman",Times,serif;
+  --pad:clamp(16px,4vw,56px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:16px;line-height:1.45;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1320px;margin:0 auto;padding:0 var(--pad)}
+.label{font-family:var(--serif);font-style:italic;color:var(--accent);font-size:18px;text-transform:lowercase}
+.up{text-transform:uppercase;letter-spacing:.02em}
+.muted{color:var(--muted)}
+
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(11,9,10,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:64px;gap:24px}
+.logo{font-weight:500;font-size:18px;letter-spacing:.04em;white-space:nowrap}
+.logo span{font-family:var(--serif);font-style:italic;color:var(--accent);text-transform:lowercase;font-weight:400;margin-left:6px}
+nav ul{display:flex;gap:28px;list-style:none;font-size:13px;text-transform:uppercase;letter-spacing:.04em}
+nav a{color:var(--muted);transition:color .2s}
+nav a:hover{color:var(--fg)}
+.burger{display:none;background:none;border:1px solid #fff;border-radius:8px;width:44px;height:36px;color:#fff;cursor:pointer}
+.burger i{display:block;height:1px;background:#fff;margin:6px 10px}
+@media (max-width:900px){
+  .burger{display:block}
+  nav{position:absolute;left:0;right:0;top:64px;background:var(--bg);border-bottom:1px solid var(--line);display:none}
+  nav.open{display:block}
+  nav ul{flex-direction:column;gap:0;padding:8px var(--pad) 16px}
+  nav li a{display:block;padding:12px 0;font-size:15px;color:var(--fg)}
+}
+
+/* hero */
+.hero{padding-top:clamp(40px,7vw,96px);padding-bottom:clamp(32px,5vw,64px)}
+.hero h1{font-weight:400;text-transform:uppercase;line-height:.92;font-size:clamp(46px,10.5vw,150px);letter-spacing:-.02em}
+.hero h1 em{font-family:var(--serif);font-style:italic;text-transform:lowercase;color:var(--accent);letter-spacing:0}
+.hero-grid{display:grid;grid-template-columns:2.2fr 1fr;gap:16px;margin-top:clamp(28px,4vw,48px);align-items:end}
+.hero-sub{display:flex;justify-content:space-between;gap:24px;margin-top:24px;font-size:14px;text-transform:uppercase;flex-wrap:wrap}
+.hero-sub p{max-width:520px}
+@media (max-width:700px){.hero-grid{grid-template-columns:1fr}}
+
+/* video frame */
+.v{position:relative;background:var(--bg2);border-radius:14px;overflow:hidden;width:100%}
+.v iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.r169{aspect-ratio:16/9}.r916{aspect-ratio:9/16}.r34{aspect-ratio:3/4}.r43{aspect-ratio:4/3}.r11{aspect-ratio:1/1}
+figcaption{font-size:12px;color:var(--muted);margin-top:8px;text-transform:uppercase;letter-spacing:.04em}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stat{padding:28px 0}
+.stat+.stat{border-left:1px solid var(--line);padding-left:24px}
+.stat b{display:block;font-weight:400;font-size:clamp(34px,5vw,64px);line-height:1}
+.stat span{font-size:13px;color:var(--muted);text-transform:uppercase}
+@media (max-width:600px){.stats{grid-template-columns:1fr}.stat+.stat{border-left:0;border-top:1px solid var(--line);padding-left:0}}
+
+/* sections */
+section{padding:clamp(56px,8vw,112px) 0}
+.sec-head{display:grid;grid-template-columns:1fr 2fr;gap:24px;margin-bottom:clamp(28px,4vw,48px)}
+.sec-head h2{font-weight:400;text-transform:uppercase;font-size:clamp(30px,5vw,64px);line-height:.95;letter-spacing:-.01em}
+.sec-head p{font-size:clamp(17px,1.6vw,21px);max-width:720px}
+.sec-head p b{font-weight:500}
+@media (max-width:800px){.sec-head{grid-template-columns:1fr}}
+.divider{border-top:1px solid var(--line)}
+
+.about{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+.about p{font-size:clamp(20px,2.3vw,30px);line-height:1.2;text-transform:uppercase}
+.about p .muted{color:var(--muted)}
+.svc{list-style:none;border-top:1px solid var(--line)}
+.svc li{padding:16px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;text-transform:uppercase;font-size:14px}
+.svc li::after{content:"■";color:var(--accent);font-size:10px}
+@media (max-width:800px){.about{grid-template-columns:1fr}}
+
+/* cards to directions */
+.dirs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.dir{border:1px solid var(--line);border-radius:14px;padding:24px;display:flex;flex-direction:column;gap:14px;min-height:220px;transition:border-color .2s,background .2s}
+.dir:hover{border-color:var(--accent);background:var(--bg2)}
+.dir h3{font-weight:400;text-transform:uppercase;font-size:22px}
+.dir p{color:var(--muted);font-size:14px;flex:1}
+.dir span{font-size:13px;text-transform:uppercase}
+.dir span::after{content:" →";color:var(--accent)}
+@media (max-width:800px){.dirs{grid-template-columns:1fr}}
+
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.g2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.g-wide{display:grid;grid-template-columns:3fr 1fr;gap:16px;align-items:end}
+.g-cat{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:start}
+@media (max-width:800px){.g-wide,.g2{grid-template-columns:1fr}.g-cat{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.g3{grid-template-columns:1fr 1fr}.g3 figure:last-child:nth-child(odd){grid-column:span 2;max-width:calc(50% - 8px);justify-self:center;width:100%}}
+@media (max-width:480px){.g-cat{grid-template-columns:1fr}}
+
+.notes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
+.note{border-top:1px solid var(--accent);padding-top:14px;font-size:14px}
+.note b{display:block;font-weight:500;text-transform:uppercase;margin-bottom:6px}
+.note p{color:var(--muted)}
+@media (max-width:800px){.notes{grid-template-columns:1fr}}
+
+/* projects */
+.proj{display:grid;grid-template-columns:1fr 3fr;gap:24px;padding:32px 0;border-top:1px solid var(--line)}
+.proj h3{font-weight:400;text-transform:uppercase;font-size:24px;line-height:1.05}
+.proj h3 small{display:block;font-size:13px;color:var(--muted);margin-top:8px}
+@media (max-width:800px){.proj{grid-template-columns:1fr}}
+.proj .narrow{max-width:420px}
+
+/* prices */
+.price{list-style:none;border-top:1px solid var(--line)}
+.price li{display:grid;grid-template-columns:1fr auto;gap:8px 24px;padding:16px 0;border-bottom:1px solid var(--line)}
+.price li b{font-weight:400;text-transform:uppercase;font-size:15px}
+.price li span{white-space:nowrap;font-size:15px}
+.price li small{grid-column:1/-1;color:var(--muted);font-size:13px;max-width:760px}
+@media (max-width:560px){.price li{grid-template-columns:1fr}.price li span{white-space:normal;color:var(--accent)}}
+.calc{margin-top:40px;background:var(--bg2);border-radius:14px;padding:clamp(20px,3vw,36px)}
+.calc h3{font-weight:400;text-transform:uppercase;font-size:22px;margin-bottom:6px}
+.calc .row{display:grid;grid-template-columns:1fr 60px 110px 120px;gap:8px;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
+.calc .row>*:not(:first-child){text-align:right;white-space:nowrap}
+.calc .row.h{color:var(--muted);font-size:12px;text-transform:uppercase}
+.calc .row.t{border-bottom:0;font-size:18px;padding-top:16px}
+.calc .per{margin-top:12px;font-size:clamp(22px,3vw,34px)}
+.calc .per em{font-family:var(--serif);color:var(--accent)}
+@media (max-width:560px){.calc .row{grid-template-columns:1fr 80px}.calc .row>:nth-child(2),.calc .row>:nth-child(3){display:none}}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+@media (max-width:900px){.two{grid-template-columns:1fr}}
+.two h3{font-weight:400;text-transform:uppercase;font-size:18px;margin-bottom:12px}
+
+/* footer */
+footer{border-top:1px solid var(--line);padding:clamp(56px,8vw,96px) 0 32px}
+.cta{font-size:clamp(22px,3vw,40px);line-height:1.15;text-transform:uppercase;max-width:980px}
+.cta .muted{color:var(--muted)}
+.contacts{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.contacts a{font-size:clamp(17px,1.8vw,22px);border-bottom:1px solid var(--line);padding-bottom:6px;display:inline-block;word-break:break-all}
+.contacts a:hover{border-color:var(--accent)}
+.contacts div>span{display:block;margin-bottom:8px}
+@media (max-width:800px){.contacts{grid-template-columns:1fr}}
+.big{font-size:clamp(48px,12.5vw,190px);line-height:.85;text-transform:uppercase;letter-spacing:-.03em;margin-top:64px;white-space:nowrap}
+.legal{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:24px;font-size:12px;color:var(--muted);text-transform:uppercase}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="#top">СТУДИЯ 20,93<span>video</span></a>
+    <button class="burger" aria-label="Меню" aria-expanded="false"><i></i><i></i></button>
+    <nav>
+      <ul>
+        <li><a href="#social">Соцсети</a></li>
+        <li><a href="#image">Имиджевое видео</a></li>
+        <li><a href="#catalog">Каталог</a></li>
+        <li><a href="#projects">Проекты</a></li>
+        <li><a href="#prices">Условия</a></li>
+        <li><a href="#contacts">Контакты</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <h1>Видео<br>для <em>ювелирных</em><br>брендов</h1>
+    <div class="hero-grid">
+      <div class="v r169"><iframe loading="lazy" src="https://kinescope.io/embed/nDen7m9CVwMGKt4SBAFfMk?muted=true&autoplay=true&autopause=false&loop=true" allow="autoplay; fullscreen; picture-in-picture; encrypted-media" allowfullscreen title="Шоурил студии"></iframe></div>
+      <div class="v r34"><iframe loading="lazy" src="https://kinescope.io/embed/8Sm7n2jp1sEi3CWszD6z2X?muted=true&autoplay=true&autopause=false&loop=true" allow="autoplay; fullscreen; picture-in-picture; encrypted-media" allowfullscreen title="Видео студии"></iframe></div>
+    </div>
+    <div class="hero-sub">
+      <span class="label">(студия 20,93)</span>
+      <p>Снимаем и монтируем ролики, которые передают форму, фактуру и блеск украшений — для соцсетей, имиджевых кампаний и маркетплейсов</p>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat"><b>150230+</b><span>съёмочных часов</span></div>
+      <div class="stat"><b>5000+</b><span>изделий отснято за год</span></div>
+      <div class="stat"><b>10 лет</b><span>опыт работы</span></div>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap about">
+      <div>
+        <span class="label">(о нас)</span>
+        <p style="margin-top:16px">Мы понимаем, <span class="muted">насколько важна</span> каждая деталь <span class="muted">в ваших изделиях, и готовы предложить решения, которые</span> выделят ваш бренд на рынке</p>
+      </div>
+      <div>
+        <p style="font-size:clamp(17px,1.6vw,21px);text-transform:none;margin-bottom:28px">Мы — Студия 20,93, создаём видео полного цикла для ювелирных брендов. Снимаем ролики для каталогов, имиджевых кампаний и соцсетей — чтобы ваши украшения говорили сами за себя.</p>
+        <ul class="svc">
+          <li>Создание видеоконтента</li>
+          <li>Продакшн полного цикла для ювелирного бизнеса</li>
+          <li>Разработка визуальной концепции</li>
+          <li>План съёмок на год под маркетинговые цели</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <span class="label">(наши услуги)</span>
+    <div class="dirs" style="margin-top:16px">
+      <a class="dir" href="#social"><h3>Видео для соцсетей</h3><p>Динамичный, живой контент, который привлекает внимание и удерживает интерес аудитории.</p><span>Смотреть</span></a>
+      <a class="dir" href="#image"><h3>Имиджевое видео</h3><p>Эмоциональный образ бренда, который формирует у аудитории правильные ассоциации и ценности.</p><span>Смотреть</span></a>
+      <a class="dir" href="#catalog"><h3>Видео для каталога</h3><p>Ролики, которые точно передают внешний вид и особенности украшений — для сайта и карточек маркетплейсов.</p><span>Смотреть</span></a>
+    </div>
+  </div>
+
+  <section id="social">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="label">(об услуге)</span><h2>Видео для соцсетей</h2></div>
+        <p><b>Это динамичный, живой контент</b>, который привлекает внимание и удерживает интерес аудитории. Мы адаптируем видео под форматы платформ и стиль бренда, чтобы каждый кадр работал на вовлечённость и продажи.</p>
+      </div>
+      <div class="g3">
+        <figure><div class="v r916"><iframe loading="lazy" src="https://kinescope.io/embed/tUNkFLLs16pJXndk6FnkdB" allow="autoplay; fullscreen; picture-in-picture; encrypted-media" allowfullscreen title="Ролик для соцсетей 1"></iframe></div><figcaption>Вертикальный ролик · 9:16</figcaption></figure>
+        <figure><div class="v r916"><iframe loading="lazy" src="https://kinescope.io/embed/6yLfJaALHEAAB5kxVBG66T" allow="autoplay; fullscreen; picture-in-picture; encrypted-media" allowfullscreen title="Ролик для соцсетей 2"></iframe></div><figcaption>Вертикальный ролик · 9:16</figcaption></figure>
+        <figure><div class="v r916"><iframe loading="lazy" src="https://kinescope.io/embed/3h1HpGE6d6HAF7aoNEvqpJ" allow="autoplay; fullscreen; picture-in-picture; encrypted-media" allowfullscreen title="Ролик для соцсетей 3"></iframe></div><figcaption>Вертикальный ролик · 9:16</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap divider"></div>
+
+  <section id="image">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="label">(об услуге)</span><h2>Имиджевое видео</h2></div>
+        <p><b>Помогает создать атмосферный визуал</b>, который передаёт характер бренда. Мы продумываем каждую деталь — от образов моделей до композиции кадра, чтобы ваши украшения выглядели как часть целого мира.</p>
+      </div>
+      <div class="g-wide">
+        <figure><div class="v r169"><iframe loading="lazy" src="https://kinescope.io/embed/8eWri22PGAk7XUbDfoFZxY" allow="autoplay; fullscreen; picture-in-picture; encrypted-media" allowfullscreen title="Имиджевый фильм"></iframe></div><figcaption>Имиджевый ролик · 16:9</figcaption></figure>
+        <figure><div class="v r169"><iframe loading="lazy" src="https://kinescope.io/embed/3qMBiSUwbQucXS6BvdMMCW" allow="autoplay; fullscreen; picture-in-picture; encrypted-media" allowfullscreen title="Имиджевый тизер"></iframe></div><figcaption>Тизер · 16:9</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap divider"></div>
+
+  <section id="catalog">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="label">(об услуге)</span><h2>Видео для каталога</h2></div>
+        <p><b>Аккуратные, детальные ролики</b>, которые подчёркивают форму, фактуру и блеск ювелирных изделий. Мы создаём видео, которое помогает покупателю рассмотреть изделие и принять решение о покупке.</p>
+      </div>
+      <div class="g-cat">
+        <figure><div class="v r34"><iframe loading="lazy" src="https://kinescope.io/embed/5WsG2n9qqdQ9mVgXDmwFm6" allow="autoplay; fullscreen; picture-in-picture; encrypted-media" allowfullscreen title="Видео для каталога 1"></iframe></div><figcaption>На модели · 3:4</figcaption></figure>
+        <figure><div class="v r11"><iframe loading="lazy" src="https://kinescope.io/embed/aRHL3n9qmBwgfSu9SGt25g" allow="autoplay; fullscreen; picture-in-picture; encrypted-media" allowfullscreen title="Видео для каталога 2"></iframe></div><figcaption>Квадрат · 1:1</figcaption></figure>
+        <figure><div class="v r34"><iframe loading="lazy" src="https://kinescope.io/embed/wJwUWMsBZhyHgCXKpQvk4x" allow="autoplay; fullscreen; picture-in-picture; encrypted-media" allowfullscreen title="Видео для каталога 3"></iframe></div><figcaption>Карточка товара · 3:4</figcaption></figure>
+      </div>
+      <div class="notes">
+        <div class="note"><b>Формат 3:4</b><p>В таком формате видео автоматически воспроизводится в карточке товара на маркетплейсах — это повышает рентабельность съёмки.</p></div>
+        <div class="note"><b>Гарнитуры</b><p>Для гарнитура снимаем одно общее видео.</p></div>
+        <div class="note"><b>Сроки</b><p>Готовые ролики — в течение 5 дней после съёмки, чтобы вы оперативно отгружали изделия на маркетплейсы.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="label">(проекты)</span><h2>Видео&shy;проекты</h2></div>
+        <p>Ролики, снятые для ювелирных брендов Первая Бриллиантовая Компания и Бриллианты Костромы.</p>
+      </div>
+
+      <div class="proj">
+        <h3>ПБК<small>Летняя имиджевая кампания</small></h3>
+        <div class="g3">
+          <div class="v r916"><iframe loading="lazy" src="https://kinescope.io/embed/7aRPpPLZUkGgK5dptyJoCN" allow="autoplay; fullscreen; picture-in-picture; encrypted-media" allowfullscreen title="ПБК лето 1"></iframe></div>
+          <div class="v r916"><iframe loading="lazy" src="https://kinescope.io/embed/fzLnKC8LhizUoen7kgFfd2" allow="autoplay; fullscreen; picture-in-picture; encrypted-media" allowfullscreen title="ПБК лето 2"></iframe></div>
+          <div class="v r916"><iframe loading="lazy" src="https://kinescope.io/embed/pSVz2UuqUJ1awM637vFrqF" allow="autoplay; fullscreen; picture-in-picture; encrypted-media" allowfullscreen title="ПБК лето 3"></iframe></div>
+        </div>
+      </div>
+
+      <div class="proj">
+        <h3>ПБК<small>Имиджевая кампания «Золото»</small></h3>
+        <div class="v r169"><iframe loading="lazy" src="https://kinescope.io/embed/jH4tvrrGKhJsKYkFXvAzFH" allow="autoplay; fullscreen; picture-in-picture; encrypted-media" allowfullscreen title="ПБК золото"></iframe></div>
+      </div>
+
+      <div class="proj">
+        <h3>ПБК<small>Имиджевая кампания «Рассвет»</small></h3>
+        <div class="v r169"><iframe loading="lazy" src="https://kinescope.io/embed/9aEDVhGGSTceB92eMFncSG" allow="autoplay; fullscreen; picture-in-picture; encrypted-media" allowfullscreen title="ПБК рассвет"></iframe></div>
+      </div>
+
+      <div class="proj">
+        <h3>Первая Бриллиантовая Компания<small>Имиджевая съёмка</small></h3>
+        <div class="v r43"><iframe loading="lazy" src="https://kinescope.io/embed/dzGAFm2nMNWGZAcQLov6SR" allow="autoplay; fullscreen; picture-in-picture; encrypted-media" allowfullscreen title="Первая Бриллиантовая Компания"></iframe></div>
+      </div>
+
+      <div class="proj">
+        <h3>Бриллианты Костромы<small>Имиджевая съёмка</small></h3>
+        <div class="v r169"><iframe loading="lazy" src="https://kinescope.io/embed/fGqEw9nhzWiaWh68SyMX8e" allow="autoplay; fullscreen; picture-in-picture; encrypted-media" allowfullscreen title="Бриллианты Костромы"></iframe></div>
+      </div>
+
+      <div class="proj">
+        <h3>ПБК<small>Видео для каталога</small></h3>
+        <div class="g2">
+          <div class="v r34"><iframe loading="lazy" src="https://kinescope.io/embed/bEN37SpGcpxg74mshKVFy4" allow="autoplay; fullscreen; picture-in-picture; encrypted-media" allowfullscreen title="ПБК каталог"></iframe></div>
+          <div class="v r34"><iframe loading="lazy" src="https://kinescope.io/embed/fLD3qqqoTftqP3RrfYewXt" allow="autoplay; fullscreen; picture-in-picture; encrypted-media" allowfullscreen title="Видео для карточки товара"></iframe></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="prices" style="background:#0f0d0e">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="label">(условия)</span><h2>Стоимость видео&shy;съёмки</h2></div>
+        <p><b>Организуем съёмку под ключ</b> — от подбора модели и одежды до финального монтажа. Вы получаете качественный видеоконтент с минимальными рисками. Стоимость каждого проекта рассчитывается индивидуально, исходя из времени, затраченного на проект.</p>
+      </div>
+
+      <div class="two">
+        <div>
+          <h3>Съёмка и производство</h3>
+          <ul class="price">
+            <li><b>Работа оператора на площадке</b><span>70 000 ₽ / смена</span><small>7 000 ₽ / час</small></li>
+            <li><b>Аренда видео-сетапа</b><span>под задачу</span><small>Рассчитывается под задачу. Пример: видео-сетап для съёмки каталога — 17 000 ₽</small></li>
+            <li><b>Монтаж роликов</b><span>18 000 ₽ / смена</span><small>За смену можно смонтировать до 60 роликов для каталога</small></li>
+            <li><b>Аренда студии</b><span>25 000 ₽ / смена</span></li>
+            <li><b>Работа организатора</b><span>15 000 ₽ / проект</span><small>Минимизирует риск срыва съёмки и ухудшения качества готового материала</small></li>
+            <li><b>Питание команды на площадке</b><span>3 500 ₽</span></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Модель и образ</h3>
+          <ul class="price">
+            <li><b>Работа модели (модель из Москвы)</b><span>63 000 ₽ / смена</span><small>Включает: работа на площадке — 50 000 ₽; маникюр — от 5 000 ₽; транспорт — от 8 000 ₽; проживание — 5 000 ₽. Рекомендуем приезд вечером накануне: если модель приезжает в день съёмки, к середине дня она выглядит уставшей в кадре. Стоимость средняя и зависит от модели и агентства.</small></li>
+            <li><b>Макияж, причёска + сопровождение</b><span>15 200 ₽ / смена</span></li>
+            <li><b>Работа стилиста</b><span>5 000 ₽ / образ</span><small>+ стоимость одежды на выкуп. Стоимость возвращается, если одежда возвратная и не испорчена на съёмке.</small></li>
+          </ul>
+          <p class="muted" style="font-size:13px;margin-top:16px">Право размещения видеоматериалов — только в сети Интернет (сайты, маркетплейсы, социальные сети). Права на иное использование оговариваются с букером отдельно.</p>
+        </div>
+      </div>
+
+      <div class="calc">
+        <span class="label">(пример расчёта)</span>
+        <h3 style="margin-top:8px">7 часов съёмки, 60 артикулов, модель из Москвы, видео на каждый артикул</h3>
+        <div class="row h"><span>Позиция</span><span>Кол-во</span><span>Цена</span><span>Сумма</span></div>
+        <div class="row"><span>Работа оператора (смена)</span><span>1</span><span>70 000</span><span>70 000</span></div>
+        <div class="row"><span>Работа модели (смена)</span><span>1</span><span>63 000</span><span>63 000</span></div>
+        <div class="row"><span>Макияж, укладка + сопровождение</span><span>1</span><span>15 200</span><span>15 200</span></div>
+        <div class="row"><span>Работа организатора (проект)</span><span>1</span><span>15 000</span><span>15 000</span></div>
+        <div class="row"><span>Работа стилиста (образ)</span><span>3</span><span>5 000</span><span>15 000</span></div>
+        <div class="row"><span>Аренда студии (смена)</span><span>1</span><span>25 000</span><span>25 000</span></div>
+        <div class="row"><span>Видео-сетап для каталога</span><span>1</span><span>17 000</span><span>17 000</span></div>
+        <div class="row"><span>Питание на площадке</span><span>1</span><span>3 500</span><span>3 500</span></div>
+        <div class="row"><span>Монтаж 60 роликов (смена)</span><span>1</span><span>18 000</span><span>18 000</span></div>
+        <div class="row t"><span>Итого</span><span></span><span></span><span>241 700 ₽</span></div>
+        <p class="per">≈ 4 028 ₽ <em>за ролик на артикул</em></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="contacts">
+  <div class="wrap">
+    <span class="label">(контакты)</span>
+    <p class="cta" style="margin-top:16px">Для обсуждения проектов <span class="muted">свяжитесь с нами по почте или в Telegram.</span> Мы на связи и открыты к новым проектам.</p>
+    <div class="contacts">
+      <div><span class="label">(email)</span><a href="mailto:dkochetkov@studio2093.ru">dkochetkov@studio2093.ru</a></div>
+      <div><span class="label">(tg менеджер)</span><a href="https://t.me/dkochetkov" target="_blank" rel="noopener">@dkochetkov</a></div>
+      <div><span class="label">(tg студия)</span><a href="https://t.me/studio20_93" target="_blank" rel="noopener">@studio20_93</a></div>
+    </div>
+    <div class="big">Студия 20,93</div>
+    <div class="legal">
+      <span>Дмитрий — оператор, руководитель студии</span>
+      <span>ООО «Артобъект 20,93» · ИНН 4401186085 · ОГРН 1184401001289</span>
+      <a href="https://studio2093.ru" target="_blank" rel="noopener">studio2093.ru</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const b=document.querySelector('.burger'), n=document.querySelector('nav');
+  b.addEventListener('click',()=>{const o=n.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+  n.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{n.classList.remove('open');b.setAttribute('aria-expanded',false)}));
+</script>
+</body>
+</html>
